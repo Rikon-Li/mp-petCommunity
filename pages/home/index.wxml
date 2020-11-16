@@ -1,0 +1,5 @@
+<!--miniprogram/pages/index/index.wxml-->
+<navigationBar>
+  <text>首页</text>
+</navigationBar>
+<text>miniprogram/pages/index/index.wxml</text>

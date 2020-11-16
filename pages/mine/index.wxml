@@ -1,0 +1,4 @@
+<navigationBar>
+  <text>我的</text>
+</navigationBar>
+<button open-type="getUserInfo">欢迎登录</button>

@@ -1,0 +1,16 @@
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* color: #fff; */
+  background: #fff;
+  border-bottom: 1rpx solid #EEE;
+}
+
+.nav-bar .search {
+  display: flex;
+  width: 60%;
+  font-size: 44rpx;
+  font-weight: bold;
+  position: absolute;
+}

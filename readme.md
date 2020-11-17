@@ -4,3 +4,7 @@
 
 ### Axure: http://cloud.axureshop.com/a42883
 
+> client: miniprogram
+>
+> server: koa server
+

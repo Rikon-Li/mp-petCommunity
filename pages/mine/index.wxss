@@ -1,1 +1,105 @@
-/* miniprogram/pages/mine/index.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.info {
+  height: 400rpx;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 30rpx;
+}
+
+.infoTop {
+  display: flex;
+  height: 250rpx;
+}
+
+.nickname {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 45rpx;
+  padding-left: 30rpx;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.about {
+  font-size: 26rpx;
+  line-height: 44rpx;
+  font-weight: normal;
+  margin-top: 26rpx;
+}
+
+.about text {
+  background-color: #ddd;
+  height: 44rpx;
+  padding: 10rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+  border-radius: 10rpx;
+}
+
+.like {
+  margin-right: 20rpx;
+}
+
+.avatar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+}
+
+.avatar image {
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+
+.infoBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.infoBottom view {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoBottom view image {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.infoBottom view text {
+  margin-top: 15rpx;
+  color: #515151;
+  font-size: 25rpx;
+}
+
+.loginWrap {
+  border-bottom: 1rpx solid #eee;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.loginWrap image {
+  height: 80%;
+  width: 700rpx;
+}
+
+button {
+  color: #fff;
+  background-color: #FDCD4C;
+}

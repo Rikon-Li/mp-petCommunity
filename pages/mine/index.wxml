@@ -1,4 +1,53 @@
-<navigationBar>
-  <text>我的</text>
-</navigationBar>
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfoAction">登录</button>
+<navigationBar />
+<view wx:if="{{isLogin}}" class="info">
+  <view class="infoTop">
+
+    <view class="nickname">
+      <text>{{userInfo.nickName}}</text>
+      <view class="about">
+        <text class="like">👍 点赞 20</text>
+        <text class="follow">❤️ 粉丝 36</text>
+      </view>
+    </view>
+
+    <view class="avatar">
+      <image src="{{userInfo.avatarUrl}}"></image>
+    </view>
+
+  </view>
+  <view class="infoBottom">
+    <view>
+      <image src="../../src/mineIcons/mine-lingyang.png"></image>
+      <text>领养</text>
+    </view>
+
+    <view>
+      <image src="../../src/mineIcons/mine-jiyang.png"></image>
+      <text>寄养</text>
+    </view>
+
+    <view>
+      <image src="../../src/mineIcons/mine-fuwu.png"></image>
+      <text>服务</text>
+    </view>
+
+    <view>
+      <image src="../../src/mineIcons/mine-shoucang.png"></image>
+      <text>收藏</text>
+    </view>
+
+    <view>
+      <image src="../../src/mineIcons/mine-shezhi.png"></image>
+      <text>设置</text>
+    </view>
+
+  </view>
+</view>
+
+<view class="loginWrap" wx:else>
+  <image src="../../src/loginpic.png"></image>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfoAction">登录</button>
+</view>
+
+
+<button bindtap="logout" wx:if="{{isLogin}}">注销</button>

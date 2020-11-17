@@ -1,3 +1,5 @@
+import store from './store/index'
+
 App({
   onLaunch: function (options) {
     const that = this;
@@ -11,15 +13,33 @@ App({
     that.globalData.menuBotton = menuButtonInfo.top - systemInfo.statusBarHeight;
     that.globalData.menuHeight = menuButtonInfo.height;
 
+    // 检查是否登录
     this.checkLogin();
+
+    // 获取用户信息
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+          wx.getUserInfo({
+            success: res => {
+              // 可以将 res 发送给后台解码出 unionId
+              this.globalData.userInfo = res.userInfo
+              console.log('app.js:', res.userInfo);
+
+              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+              // 所以此处加入 callback 以防止这种情况
+              if (this.userInfoReadyCallback) {
+                this.userInfoReadyCallback(res)
+              }
+            }
+          })
+        }
+      }
+    })
+
   },
-  // 数据都是根据当前机型进行计算，这样的方式兼容大部分机器
-  globalData: {
-    navBarHeight: 0, // 导航栏高度
-    menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）
-    menuBotton: 0, // 胶囊距底部间距（保持底部间距一致）
-    menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
-  },
+
 
 
   checkLogin() {
@@ -40,7 +60,11 @@ App({
             //登录过期了
             this.login();
           } else {
-            //登录没有过期，什么也不用干
+            // 已经登录过了，不做操作
+            store.dispatch({
+              type: 'login',
+              value: true
+            })
           }
         },
         fail: (error) => {
@@ -71,6 +95,7 @@ App({
 
             // 登录第七步：保存登录态
             wx.setStorageSync('TOKEN', token);
+
           },
           fail(error) {
             console.log(error);
@@ -78,5 +103,17 @@ App({
         })
       }
     })
-  }
+  },
+
+  // 仓库数据
+  store,
+
+  // 数据都是根据当前机型进行计算，这样的方式兼容大部分机器
+  globalData: {
+    navBarHeight: 0, // 导航栏高度
+    menuRight: 0, // 胶囊距右方间距（方保持左、右间距一致）
+    menuBotton: 0, // 胶囊距底部间距（保持底部间距一致）
+    menuHeight: 0, // 胶囊高度（自定义内容可与胶囊高度保证一致）
+  },
+
 })

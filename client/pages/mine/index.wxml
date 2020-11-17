@@ -3,7 +3,7 @@
   <view class="infoTop">
 
     <view class="nickname">
-      <text>{{userInfo.nickName}}</text>
+      <open-data type="userNickName" />
       <view class="about">
         <text class="like">👍 点赞 20</text>
         <text class="follow">❤️ 粉丝 36</text>
@@ -11,7 +11,9 @@
     </view>
 
     <view class="avatar">
-      <image src="{{userInfo.avatarUrl}}"></image>
+      <view class='avatarPic'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
     </view>
 
   </view>

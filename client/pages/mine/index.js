@@ -12,7 +12,8 @@ Page({
     // 订阅store的变化，获取值
     app.store.subscribe(() => {
       this.setData({
-        isLogin: app.store.getState().isLogin
+        isLogin: app.store.getState().isLogin,
+        userInfo: app.globalData.userInfo,
       });
     });
     if (app.globalData.userInfo) {

@@ -54,10 +54,11 @@ page {
   padding-right: 30rpx;
 }
 
-.avatar image {
+.avatarPic {
   height: 150rpx;
   width: 150rpx;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .infoBottom {

@@ -1,5 +1,5 @@
 import store from './store/index'
-
+import requestForums from './store/index'
 App({
   onLaunch: function (options) {
     const that = this;
@@ -26,7 +26,6 @@ App({
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
               console.log('app.js:', res.userInfo);
-
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
@@ -107,7 +106,7 @@ App({
 
   // 仓库数据
   store,
-
+  requestForums,
   // 数据都是根据当前机型进行计算，这样的方式兼容大部分机器
   globalData: {
     navBarHeight: 0, // 导航栏高度

@@ -18,7 +18,7 @@ router.post("/send_code", async (ctx) => {
   const result = await axios.get(
     `https://api.weixin.qq.com/sns/jscode2session?appid=${appid}&secret=${secret}&js_code=${code}&grant_type=authorization_code`
   );
-
+   console.log(result);
   // 登录第四步：获得openid和session_key
   if (result.status === 200) {
     // 隐藏步骤：静默注册
@@ -27,7 +27,7 @@ router.post("/send_code", async (ctx) => {
       //老用户了
     } else {
       //新用户，需要注册
-      const newUser = await new User({ openid: result.data.openid }).save();
+      const newUser = await new User({ openid: result.data.openid}).save();
     }
 
     // 登录第五步：响应登录态给客户端

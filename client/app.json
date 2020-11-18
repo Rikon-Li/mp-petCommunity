@@ -1,0 +1,41 @@
+{
+  "entryPagePath": "pages/mine/index",
+  "pages": [
+    "pages/home/index",
+    "pages/forum/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "宠物社区",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#BFBFBF",
+    "selectedColor": "#FDCD4C",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "./src/tabIcons/home-mod.png",
+        "selectedIconPath": "./src/tabIcons/home-act.png"
+      },
+      {
+        "pagePath": "pages/forum/index",
+        "text": "论坛",
+        "iconPath": "./src/tabIcons/forum-mod.png",
+        "selectedIconPath": "./src/tabIcons/forum-act.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "./src/tabIcons/mine-mod.png",
+        "selectedIconPath": "./src/tabIcons/mine-act.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

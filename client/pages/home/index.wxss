@@ -1,1 +1,69 @@
-/* miniprogram/pages/index/index.wxss */
+.swiper{
+  height: 300rpx;
+  width: 100%;
+}
+.item-img{
+  width: 100%;
+  height: 100%;
+}
+
+.adopt{
+  padding: 20rpx 10rpx;
+   display: flex;
+   justify-content: space-between;
+   font-size: 30rpx;
+   color: #999;
+ }
+ .firstT{
+   color: #333;
+   font-weight: bold;
+   font-size: 35rpx;
+ }
+ .adoptConWrap{
+  width: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 60rpx;
+  margin-bottom: 15rpx;
+  flex-direction: column;
+}
+ .adoptCon{
+  white-space: nowrap;
+}
+.adoptItem{
+  height: 380rpx;
+  padding: 20rpx 0;
+  /* overflow: hidden; */
+  width: 300rpx;
+  /* display: inline-block; */
+  
+   display: inline-flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.adoptImg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.name{
+  color: #999;
+  font-size: 30rpx;
+}
+.title{
+  font-size: 35rpx;
+  margin-top: 20rpx;
+}
+.line{
+  height: 0;
+  width: 70%;
+
+  margin-top: 30rpx;
+  border-bottom: 3rpx solid #999;
+}
+.message{
+  font-size: 26rpx;
+  margin-top: 30rpx;
+  color: #999;
+}

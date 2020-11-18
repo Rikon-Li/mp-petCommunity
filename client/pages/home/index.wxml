@@ -2,4 +2,62 @@
 <navigationBar>
   <text>首页</text>
 </navigationBar>
-<text>miniprogram/pages/index/index.wxml</text>
+<scroll-view>
+  <swiper autoplay="true" interval="2000" class="swiper">
+ <swiper-item class="swiperItem"><image class="item-img" src="../../src/homepageBanner/banner.png"></image></swiper-item>
+ <swiper-item><image  class="item-img" src="../../src/homepageBanner/banner.png"></image></swiper-item>
+ <swiper-item><image  class="item-img" src="../../src/homepageBanner/banner.png"></image></swiper-item>
+ </swiper>
+ <view class="adopt"> 
+  <text class="firstT">领养机构</text>
+  <text>共20家</text>
+ </view>
+ <view class="adoptConWrap">
+
+ <scroll-view class="adoptCon" bounces="true" scroll-x="true"  style="width: 100%">
+  <view class="adoptItem">
+     <image class="adoptImg" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1717673609,1845600822&fm=26&gp=0.jpg"></image>
+     <text class="name">喵喵</text>
+     <text class="title">喵喵宠物之家</text>
+     <view class="line"></view>
+     <text class="message">待领养20只</text>
+   </view>
+   <view class="adoptItem">
+     <image class="adoptImg" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605587751098&di=85eeb3767527c123f7c9d19c886d8d42&imgtype=0&src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201911%2F28%2F20191128090036_5RLKX.thumb.700_0.jpeg"></image>
+     <text class="name">哈士奇</text>
+     <text class="title">二哈宠物之家</text>
+     <view class="line"></view>
+     <text class="message">待领养20只</text>
+   </view>
+   <view class="adoptItem">
+     <image class="adoptImg" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605587791134&di=c81a7ced84a62967bad984de49d22756&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201808%2F15%2F20180815112433_sttyo.thumb.700_0.jpeg"></image>
+     <text class="name">小柴犬</text>
+     <text class="title">旺柴宠物之家</text>
+     <view class="line"></view>
+     <text class="message">待领养20只</text>
+   </view>
+   <view class="adoptItem">
+     <image class="adoptImg" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1717673609,1845600822&fm=26&gp=0.jpg"></image>
+     <text class="name">喵喵</text>
+     <text class="title">喵喵宠物之家</text>
+     <view class="line"></view>
+     <text class="message">待领养20只</text>
+   </view>
+   <view class="adoptItem">
+     <image class="adoptImg" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605587751098&di=85eeb3767527c123f7c9d19c886d8d42&imgtype=0&src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201911%2F28%2F20191128090036_5RLKX.thumb.700_0.jpeg"></image>
+     <text class="name">哈士奇</text>
+     <text class="title">二哈宠物之家</text>
+     <view class="line"></view>
+     <text class="message">待领养20只</text>
+   </view>
+   <view class="adoptItem">
+     <image class="adoptImg" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1605587791134&di=c81a7ced84a62967bad984de49d22756&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201808%2F15%2F20180815112433_sttyo.thumb.700_0.jpeg"></image>
+     <text class="name">小柴犬</text>
+     <text class="title">旺柴宠物之家</text>
+     <view class="line"></view>
+     <text class="message">待领养20只</text>
+   </view>
+</scroll-view>
+ </view>
+ 
+</scroll-view>

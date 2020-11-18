@@ -32,10 +32,14 @@
   white-space: nowrap;
 }
 .adoptItem{
-  height: 380rpx;
-  padding: 20rpx 0;
+  height: 330rpx;
+  border: 1rpx solid rgba(1, 1, 1, 0.1);
+  border-radius: 20rpx;
+  margin: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
   /* overflow: hidden; */
-  width: 300rpx;
+  width: 250rpx;
   /* display: inline-block; */
   
    display: inline-flex;
@@ -60,7 +64,7 @@
   width: 70%;
 
   margin-top: 30rpx;
-  border-bottom: 3rpx solid #999;
+  border-bottom: 2rpx solid #999;
 }
 .message{
   font-size: 26rpx;

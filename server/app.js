@@ -5,6 +5,7 @@ const bodyparser = require("koa-bodyparser");
 const auth = require("./routes/auth");
 const user = require("./routes/user");
 const forum = require("./routes/forum");
+const toolsRoutes = require("./routes/tools");
 
 const app = new Koa();
 
@@ -27,5 +28,6 @@ parameter(app);
 app.use(auth.routes()).use(auth.allowedMethods());
 app.use(user.routes()).use(user.allowedMethods());
 app.use(forum.routes()).use(forum.allowedMethods());
+app.use(toolsRoutes.routes()).use(toolsRoutes.allowedMethods());
 
 module.exports = app;

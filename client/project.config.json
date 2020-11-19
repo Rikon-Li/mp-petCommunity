@@ -71,6 +71,12 @@
           "pathName": "pages/forum/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/edit/index",
+          "pathName": "pages/edit/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

@@ -37,7 +37,7 @@
 </view>
 
 
-<view class="sendBtn">
+<navigator class="sendBtn" url="/pages/edit/index">
+  
   <image src="../../src/send.png"></image>
-</view>
-
+</navigator>

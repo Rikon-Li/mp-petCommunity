@@ -2,38 +2,42 @@
   <text>论坛</text>
 </navigationBar>
 
-<!-- <view class="wrap" wx:for='{{10}}'>
-  <view class="messageWrap">
-    <view class="messageTop">
-
-      <view class="nicknameWrap">
-        <view class="avatar">
-          <image
-            src="https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erGMS8zsTMqIpcTAzfz66fNqxlx6EicMV7dM0s5cspAPAC2Qv2juPPlRA7AEv6aZ6u05icQ0LvlibBjA/132">
-          </image>
+<view style='height:calc(100% - {{navBarHeight}}px); width:100%;'>
+  <scroll-view scroll-y="{{true}}" style='height:100% ; width:100%;'>
+    <view class="wrap" wx:for='{{forums}}'>
+      <view class="messageWrap">
+        <view class="messageTop">
+          <view class="nicknameWrap">
+            <view class="avatar">
+              <image src="{{item.avatarUrl}}">
+              </image>
+            </view>
+            <text class="nickname">{{item.nickName}}</text>
+          </view>
+          <view class="timeWrap">
+            <text class="time">12:00</text>
+          </view>
         </view>
-        <text class="nickname">高级铲屎官</text>
-      </view>
-      <view class="timeWrap">
-        <text class="time">12:00</text>
-      </view>
-    </view>
-    <view class="messageMiddle">
-      <view class="message">
-        电饭锅哈女啊吧发尬舞吧哈女啊吧发尬舞吧哈女啊吧发尬舞吧哈女啊吧发尬舞吧哈女啊吧发尬舞吧哈女啊吧发尬舞吧哈女啊吧发尬舞吧发尬个
-      </view>
-      <view class="m_pics">
-        <view class="m_pic"
-          wx:for="{{['https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erGMS8zsTMqIpcTAzfz66fNqxlx6EicMV7dM0s5cspAPAC2Qv2juPPlRA7AEv6aZ6u05icQ0LvlibBjA/132','https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erGMS8zsTMqIpcTAzfz66fNqxlx6EicMV7dM0s5cspAPAC2Qv2juPPlRA7AEv6aZ6u05icQ0LvlibBjA/132','https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erGMS8zsTMqIpcTAzfz66fNqxlx6EicMV7dM0s5cspAPAC2Qv2juPPlRA7AEv6aZ6u05icQ0LvlibBjA/132']}}"
-          wx:key="index">
-          <image src="{{item}}" mode="aspectFill" />
+        <view class="messageMiddle">
+          <view class="message">
+            {{item.content}}
+          </view>
+          <view class="m_pics">
+            <view class="m_pic" wx:for="{{item.pic}}" wx:key="index">
+              <image src="{{item}}" mode="aspectFill" />
+            </view>
+          </view>
+        </view>
+        <view class="messageBottom">
+          <view class="support">👍 {{item.support}}</view>
         </view>
       </view>
-
     </view>
-    <view class="messageBottom">
-      <view class="support">👍 22</view>
-    </view>
+  </scroll-view>
+</view>
 
-  </view>
-</view> -->
+
+<view class="sendBtn">
+  <image src="../../src/send.png"></image>
+</view>
+

@@ -104,9 +104,3 @@ button {
   color: #fff;
   background-color: #FDCD4C;
 }
-.nav{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}

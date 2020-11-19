@@ -2,7 +2,7 @@
   <text>论坛</text>
 </navigationBar>
 
-<view class="wrap" wx:for='{{10}}'>
+<!-- <view class="wrap" wx:for='{{10}}'>
   <view class="messageWrap">
     <view class="messageTop">
 
@@ -36,4 +36,4 @@
     </view>
 
   </view>
-</view>
+</view> -->

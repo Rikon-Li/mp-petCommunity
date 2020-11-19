@@ -63,6 +63,13 @@
         {
           "name": "pages/home/index",
           "pathName": "pages/home/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/forum/index",
+          "pathName": "pages/forum/index",
+          "query": "",
           "scene": null
         }
       ]

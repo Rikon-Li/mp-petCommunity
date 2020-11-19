@@ -1,9 +1,11 @@
 {
-  "entryPagePath": "pages/mine/index",
+  "entryPagePath": "pages/home/index",
   "pages": [
     "pages/home/index",
     "pages/forum/index",
-    "pages/mine/index"
+    "pages/mine/index",
+    "pages/adoption/adoption",
+    "pages/board/board"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

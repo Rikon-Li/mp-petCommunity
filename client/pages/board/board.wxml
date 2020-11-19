@@ -1,0 +1,4 @@
+<!--pages/board/board.wxml-->
+<navigationBar>
+  <text>我要寄养</text>
+</navigationBar>

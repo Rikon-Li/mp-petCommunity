@@ -19,13 +19,21 @@
   </view>
   <view class="infoBottom">
     <view>
-      <image src="../../src/mineIcons/mine-lingyang.png"></image>
-      <text>领养</text>
+      <navigator url="../adoption/adoption" class="nav">
+        <image src="../../src/mineIcons/mine-lingyang.png"></image>
+        <text>领养</text>
+      </navigator>
     </view>
 
     <view>
-      <image src="../../src/mineIcons/mine-jiyang.png"></image>
-      <text>寄养</text>
+
+      <navigator url="../board/board" class="nav">
+        <image src="../../src/mineIcons/mine-jiyang.png"></image>
+        <text>寄养</text>
+      </navigator>
+      
+
+
     </view>
 
     <view>

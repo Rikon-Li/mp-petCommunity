@@ -3,6 +3,7 @@ Page({
 
   data: {
     forums: getApp().store.getState().forums,
+    navBarHeight: getApp().globalData.navBarHeight,
   },
 
   onLoad: async function (options) {

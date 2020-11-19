@@ -1,4 +1,7 @@
 // miniprogram/pages/index/index.js
+var util=require('../../utils/util.js')
+import requestForums from '../../store/index'
+import PubSub from 'pubsub-js'
 Page({
 
   /**
@@ -6,14 +9,38 @@ Page({
    */
   data: {
     // 组件参数设置，传递到组件
+     forums:getApp().store.getState().forums.sort(function(a,b){
+      return Number(b.support) - Number(a.support)
 
+     }),
+     navBarHeight: getApp().globalData.navBarHeight
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad:async function (options) {
+    // getApp().store.dispatchEvent("requestForums");
+    // getApp().store.dispatch(requestForums)
+    await PubSub.publish('requestForums');
+    getApp().store.subscribe(()=>{
+      this.setData({forums:getApp().store.getState().forums.sort(function(a,b){
+        return Number(b.support) - Number(a.support)
+      })});
+      const newforums=getApp().store.getState().forums.map((item,index)=>{
+       
+        let newtime=util.formatTime(new Date(Number(item.time)));
+        return {
+          ...item,
+          time:newtime
+        }
+      })
+      this.setData({forums:newforums.slice(0,3)});
+      // console.log(util.formatTime(new Date(1605701995189)));
 
+      
+    })
+    
   },
 
   /**
@@ -27,7 +54,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**

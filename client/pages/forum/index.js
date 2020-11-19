@@ -1,20 +1,22 @@
-// pages/forum/index.js
+import PubSub from 'pubsub-js'
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    forums: getApp().store.getState().forums,
+    navBarHeight: getApp().globalData.navBarHeight,
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  onLoad: async function (options) {
 
+    await PubSub.publish('requestForums');
+    getApp().store.subscribe(() => {
+      this.setData({
+        forums: getApp().store.getState().forums.sort(function (a, b) {
+          return a.support < b.support
+        })
+      });
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pubsub-js": "^1.9.1",
     "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "weui-miniprogram": "^1.0.6"
   }
 }

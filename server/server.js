@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = require("./app");
 
 // 连接数据库
-mongoose.connect("mongodb://localhost:27017/db", { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
+mongoose.connect("mongodb://47.112.160.41:27017/db", { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
   if (error) {
     console.log("数据库连接失败");
   } else {

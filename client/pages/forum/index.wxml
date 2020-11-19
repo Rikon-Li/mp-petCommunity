@@ -1,4 +1,43 @@
 <navigationBar>
   <text>论坛</text>
 </navigationBar>
-<text>pages/forum/index.wxml</text>
+
+<view style='height:calc(100% - {{navBarHeight}}px); width:100%;'>
+  <scroll-view scroll-y="{{true}}" style='height:100% ; width:100%;'>
+    <view class="wrap" wx:for='{{forums}}'>
+      <view class="messageWrap">
+        <view class="messageTop">
+          <view class="nicknameWrap">
+            <view class="avatar">
+              <image src="{{item.avatarUrl}}">
+              </image>
+            </view>
+            <text class="nickname">{{item.nickName}}</text>
+          </view>
+          <view class="timeWrap">
+            <text class="time">12:00</text>
+          </view>
+        </view>
+        <view class="messageMiddle">
+          <view class="message">
+            {{item.content}}
+          </view>
+          <view class="m_pics">
+            <view class="m_pic" wx:for="{{item.pic}}" wx:key="index">
+              <image src="{{item}}" mode="aspectFill" />
+            </view>
+          </view>
+        </view>
+        <view class="messageBottom">
+          <view class="support">👍 {{item.support}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<view class="sendBtn">
+  <image src="../../src/send.png"></image>
+</view>
+

@@ -1,8 +1,15 @@
+page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+
 .wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30rpx;
+  padding: 30rpx 0;
 }
 
 .messageWrap {
@@ -85,4 +92,11 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+
+
+.sendBtn {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
 }

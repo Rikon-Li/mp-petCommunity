@@ -36,6 +36,8 @@
   </scroll-view>
 </view>
 
+
 <view class="sendBtn">
   <image src="../../src/send.png"></image>
 </view>
+
